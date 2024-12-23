@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-left">
+	<h2 class="display-4">Zanim zaczniesz szukać w kodzie co i jak :)</h2><br/>
+	<p>
+		Ćwiczenia - dodajemy ćwiczenie (Contorllers - ExerciseTypesController, Models - Exercise)<br />
+		Sesje treningowe - (Contorllers - SessionsController, Models - Session)<br />
+		Ćwiczenia w sesji - (Contorllers - ExercisesController, Models - Exercise)<br />
+		Statystyki - (Contorllers - StatisticsController, Models - Statistic)
+	</p><br />
+	<p>Jak działają statystyki? Dynamiczna lista generowana w kontrolerze StatisticsController.</p>
+	<ul>
+		<li><strong>var fourWeeksAgo</strong> - DateTime.Now.AddDays(-28) // 4 tygodnie wstecz</li>
+		<li><strong>var exerciseStats</strong> - pobieramy statystyki z ostatnich 4 tygodni, sortujemy po dacie i grupujemy po ćwiczeniu, zwracamy jako listę, tylko najwyżwszy wynik (BestResult) z grupy ćwiczeń.</li>
+		<li><strong>BestResult</strong> - ciężar przemnożony przez łączną liczbę powtórzeń </li>
+	</ul>
+	<p>Update zajęć 09.11.2024</p>
+	<ul>
+		<li>statystyki tylko dla user</li>
+		<li>ćwiczenia w sesji tylko moje</li>
+		<li>ćwiczenia - poblokowane sesję</li>
+		<li>statystkyki tylko dla zalogowanego użytkowika</li>
+		<li>dostęp tylko po zalogowaniu</li>
+</ul>
+</div>
+

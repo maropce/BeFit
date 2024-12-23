@@ -1,0 +1,36 @@
+﻿@model BeFit.Models.Statistic
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Śzczegóły</h1>
+
+<div>
+    <h4>Statystyki</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ExerciseName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ExerciseName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NumberOfSessions)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NumberOfSessions)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BestResult)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BestResult)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edycja</a> |
+    <a asp-action="Index">Powrót</a>
+</div>

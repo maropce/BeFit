@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BeFit.Models.Statistic>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Statystyki</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ExerciseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfSessions)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BestResult)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExerciseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfSessions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BestResult)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
